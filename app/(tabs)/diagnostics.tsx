@@ -1,11 +1,14 @@
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function ExploreScreen() {
+const diagnostics = () => {
   return (
     <View>
-      <Text>Explore Screen</Text>
+      <Text>diagnostics</Text>
     </View>
   );
-}
+};
+
+export default diagnostics;
 
 const styles = StyleSheet.create({});

@@ -1,36 +1,48 @@
-import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import React from "react";
 
-import { Colors } from "@/constants/theme";
-import { useColorScheme } from "@/hooks/use-color-scheme";
+import BottomNav from "@/components/BottomNav";
+import { Colors, FontWeights, Sizes } from "@/constants/theme";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
+      tabBar={(props) => <BottomNav {...props} />}
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-        headerShown: false,
+        tabBarActiveTintColor: Colors.background,
+        headerShown: true,
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => (
-            <MaterialIcons size={28} name="house" color={color} />
-          ),
         }}
       />
+
       <Tabs.Screen
-        name="explore"
+        name="history"
         options={{
-          title: "Explore",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons size={28} name="compass" color={color} />
-          ),
+          title: "History",
+          headerStyle: { backgroundColor: Colors.background },
+          headerTitleStyle: {
+            fontSize: Sizes.screenTitle,
+            fontWeight: FontWeights.extraBold,
+            color: Colors.primary,
+          },
+        }}
+      />
+
+      <Tabs.Screen
+        name="diagnostics"
+        options={{
+          title: "Diagnostics",
+          headerStyle: { backgroundColor: Colors.background },
+          headerTitleStyle: {
+            fontSize: Sizes.screenTitle,
+            fontWeight: FontWeights.extraBold,
+            color: Colors.primary,
+          },
         }}
       />
     </Tabs>

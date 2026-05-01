@@ -1,50 +1,62 @@
-# Welcome to your Expo app 👋
+# 🌿 Plantora — AI Cassava Health Diagnostics
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Plantora** is a high-performance mobile application designed for the automated detection of cassava pathologies using computer vision and on-device machine learning. By embedding the AI directly into the **Plantora** workflow, the system provides offline, real-time diagnostics for farmers and extension workers.
 
-## Get started
+## Overview
 
-1. Install dependencies
+The system enables users to capture leaf images and receive instantaneous diagnostic feedback. Built with a focus on **Edge Intelligence**, it eliminates the need for cloud dependency, making it ideal for remote agricultural zones with limited internet connectivity.
+
+### Supported Pathologies
+
+The model is trained to identify and classify the following conditions:
+
+- [Cassava Mosaic Disease - CMD](https://en.wikipedia.org/wiki/Cassava_mosaic_viruses)
+- [Cassava Green Mottle - CGM](https://en.wikipedia.org/wiki/Cassava_green_mottle_virus)
+- [Cassava Brown Streak Disease - CBSD](https://en.wikipedia.org/wiki/Cassava_green_mottle_virus)
+- [Cassava Bacterial Blight - CBB](https://en.wikipedia.org/wiki/Bacterial_blight_of_cassava)
+- Healthy Cassava Leaves
+
+## 📱Features
+
+- 📸 Scan plant leaves using camera
+- 🖼️ Upload images from gallery
+- 🧠 AI-powered disease detection
+- 📊 Health analysis and confidence score
+- ⚡ Fast and simple user experience
+- 🎯 Designed for farmers and agricultural use
+
+## 🛠️ Tech Stack
+
+- React Native (Expo)
+- Expo Router
+- Reanimated (animations)
+- Expo Camera
+- Image Picker
+- TensorFlow Lite
+- MobileNetV2
+- Data Source - Kaggle
+
+## ⚙️ Installation
+
+1. Clone the repository
+
+   ```bash
+   git clone <https://github.com/hymmns/plantora.git>
+   cd plantora
+   ```
+
+2. Install dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Start the app
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## 👤 Author
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Taiwo Sholadoye
